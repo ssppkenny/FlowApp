@@ -1,0 +1,6 @@
+**/*.xcuserstate
+**/*.xcbkptlist
+libFlowLib.a
+Carthage
+opencv2.framework
+
