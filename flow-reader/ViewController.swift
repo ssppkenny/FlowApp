@@ -25,7 +25,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
     
     @IBAction func original(_ sender: UIBarButtonItem) {
         self.flow = false
-        self.scale = 1.0
+        self.scale = 2.0
+        recognizeItem.isEnabled = true
         self.view.setNeedsLayout()
     }
     
@@ -34,17 +35,17 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
             sender.isEnabled = false
             zoomOutItem = sender
             self.flow = true
-            self.scale *= 0.91
+            self.scale *= 0.77
             self.view.setNeedsLayout()
         }
         
     }
     @IBAction func zoomIn(_ sender: UIBarButtonItem) {
-        if (self.scale < 5.0) {
+        if (self.scale < 6.0) {
             sender.isEnabled = false
             zoomInItem = sender
             self.flow = true
-            self.scale *= 1.1
+            self.scale *= 1.3
             self.view.setNeedsLayout()
         }
         
@@ -61,7 +62,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
     
     var pageWidth : CGFloat  = 0
     
-    var scale : CGFloat = 1.0
+    var scale : CGFloat = 2.0
     
     var startPanLocation: CGPoint?
     
